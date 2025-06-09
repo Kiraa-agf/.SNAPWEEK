@@ -22,10 +22,7 @@
       background-position: center center;
       padding: 0 20px;
       color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      position: relative;
     }
 
     h1 {
@@ -34,32 +31,30 @@
       color: white;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
       font-size: 2.5rem;
-      margin-bottom: 40px;
+      margin-top: 40px;
     }
 
-    .button-container {
+    .sticker-container {
+      position: absolute;
       display: flex;
       flex-direction: column;
       gap: 20px;
+      right: 40px;
+      top: 50%;
+      transform: translateY(-50%);
+      align-items: flex-end;
     }
 
-    .button {
-      font-family: 'Nunito', sans-serif;
-      font-weight: 700;
-      padding: 15px 30px;
-      font-size: 18px;
-      color: white;
-      background-color: #65552c;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: all 0.3s ease;
+    .sticker {
+      width: 200px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 12px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
 
-    .button:hover {
-      background-color: #7a6635;
-      transform: translateY(-5px) scale(1.05);
-      box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+    .sticker:hover {
+      transform: scale(1.08);
+      box-shadow: 0 8px 12px rgba(0,0,0,0.3);
     }
 
     @media (max-width: 600px) {
@@ -72,25 +67,38 @@
 
       h1 {
         font-size: 1.8rem;
-        margin-top: -20px; /* Naikin posisi judul */
+        margin-top: 20px;
       }
 
-      .button {
-        width: 80%;
-        font-size: 1rem;
-        padding: 12px 20px;
+      .sticker-container {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .sticker {
+        width: 70%;
       }
     }
   </style>
 </head>
 <body>
 
-  <h1>Pendaftaran Lomba PAPRIKA</h1>
+  <h1></h1>
 
-  <div class="button-container">
-    <a class="button" href="https://forms.gle/wfiU98ZthA7m3bYx6" target="_blank">Lomba Pidato</a>
-    <a class="button" href="https://forms.gle/SRb4RPMsPqQjMx3W7" target="_blank">Lomba Putri SMANAVA</a>
-    <a class="button" href="https://forms.gle/A5SkcDvK8Mw9AgTMA" target="_blank">Performance Kelas</a>
+  <div class="sticker-container">
+    <a href="https://forms.gle/JapKuJVss2MwQCSB9" target="_blank">
+      <img class="sticker" src="https://i.imgur.com/XBCRYOU.png" alt="">
+    </a>
+    <a href="https://forms.gle/SCyeF9z94CshPYxM8" target="_blank">
+      <img class="sticker" src="https://i.imgur.com/06eLWWo.png" alt="">
+    </a>
+    <a href="https://forms.gle/2mBooMVkEozM98qUA" target="_blank">
+      <img class="sticker" src="https://i.imgur.com/vqnk9sj.png" alt="">
+    </a>
   </div>
 
 </body>
