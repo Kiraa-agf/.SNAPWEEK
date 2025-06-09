@@ -32,20 +32,11 @@
       margin-top: 40px;
     }
 
-    .sticker-container {
-      position: absolute;
-      top: 120px;
-      right: 40px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 20px;
-    }
-
     .sticker {
+      position: absolute;
       width: 200px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
       border-radius: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
 
@@ -54,43 +45,47 @@
       box-shadow: 0 8px 12px rgba(0,0,0,0.3);
     }
 
-    .sticker:nth-child(1) {
-      margin-right: 0;
+    /* Desktop layout - segitiga menyamping */
+    .sticker-1 {
+      top: 150px;
+      right: 40px;
     }
 
-    .sticker:nth-child(2) {
-      margin-right: 30px;
+    .sticker-2 {
+      top: 300px;
+      right: 40px;
     }
 
-    .sticker:nth-child(3) {
-      margin-right: 60px;
+    .sticker-3 {
+      top: 350px;
+      left: 80px;
     }
 
+    /* Mobile layout - segitiga menghadap atas */
     @media (max-width: 600px) {
-      body {
-        background: url('https://i.imgur.com/qhWHg4H.jpeg') no-repeat center center;
-        background-size: cover;
-        background-attachment: scroll;
-        padding-top: 20px;
-      }
-
       h1 {
         font-size: 1.8rem;
         margin-top: 20px;
       }
 
-      .sticker-container {
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        flex-direction: column;
-        align-items: center;
+      .sticker {
+        width: 35%;
       }
 
-      .sticker {
-        width: 70%;
-        margin-right: 0 !important; /* reset margin zigzag di HP */
+      .sticker-1 {
+        top: 55%;
+        left: 10%;
+      }
+
+      .sticker-2 {
+        top: 70%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .sticker-3 {
+        top: 55%;
+        right: 10%;
       }
     }
   </style>
@@ -99,17 +94,17 @@
 
   <h1></h1>
 
-  <div class="sticker-container">
-    <a href="https://forms.gle/wfiU98ZthA7m3bYx6" target="_blank">
-      <img class="sticker" src="https://i.imgur.com/JbNvQ1L.png" alt="">
-    </a>
-    <a href="https://forms.gle/SRb4RPMsPqQjMx3W7" target="_blank">
-      <img class="sticker" src="https://i.imgur.com/n4wssxS.png" alt="">
-    </a>
-    <a href="https://forms.gle/A5SkcDvK8Mw9AgTMA" target="_blank">
-      <img class="sticker" src="https://i.imgur.com/ZxbYSjA.png" alt="">
-    </a>
-  </div>
+  <a href="https://forms.gle/wfiU98ZthA7m3bYx6" target="_blank">
+    <img class="sticker sticker-1" src="https://i.imgur.com/JbNvQ1L.png" alt="">
+  </a>
+
+  <a href="https://forms.gle/SRb4RPMsPqQjMx3W7" target="_blank">
+    <img class="sticker sticker-2" src="https://i.imgur.com/n4wssxS.png" alt="">
+  </a>
+
+  <a href="https://forms.gle/A5SkcDvK8Mw9AgTMA" target="_blank">
+    <img class="sticker sticker-3" src="https://i.imgur.com/ZxbYSjA.png" alt="">
+  </a>
 
 </body>
 </html>
